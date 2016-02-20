@@ -9,6 +9,9 @@ package cse360assign3;
 public class Calculator 
 {
 	private int total;
+	private String num = "";
+	private String operator = "";
+	private String totString = "0";
 	
 	/** Initializes the total value to 0 */
 	public Calculator () 
@@ -28,6 +31,9 @@ public class Calculator
 	 */
 	public void add (int value) 
 	{
+		num = String.valueOf(value);
+		operator = " + ";
+		totString += operator + num;
 		total = total + value;
 	}
 	
@@ -37,6 +43,9 @@ public class Calculator
 	 */
 	public void subtract (int value) 
 	{
+		num = String.valueOf(value);
+		operator = " - ";
+		totString += operator + num;
 		total = total - value;
 	}
 	
@@ -46,6 +55,9 @@ public class Calculator
 	 */
 	public void multiply (int value) 
 	{
+		num = String.valueOf(value);
+		operator = " * ";
+		totString += operator + num;
 		total = total * value;
 	}
 	
@@ -55,6 +67,10 @@ public class Calculator
 	 */
 	public void divide (int value) 
 	{
+		num = String.valueOf(value);
+		operator = " / ";
+		totString += operator + num;
+		
 		if(value == 0)
 			total = 0;
 		else
@@ -64,7 +80,7 @@ public class Calculator
 	/** Returns the entire history of calculations as a String */
 	public String getHistory () 
 	{
-		return "";
+		return totString;
 	}
 
 }

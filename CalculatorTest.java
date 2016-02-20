@@ -115,8 +115,12 @@ public class CalculatorTest
 	{
 		Calculator calc = new Calculator();
 		calc.add(10);
+		calc.add(5);
+		calc.subtract(3);
+		calc.divide(2);
+		calc.multiply(5);
 		System.out.print(calc.getHistory());
-		assertEquals("", outContent.toString());
+		assertEquals("0 + 10 + 5 - 3 / 2 * 5", outContent.toString());
 	}
 
 }
