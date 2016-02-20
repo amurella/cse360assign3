@@ -19,7 +19,7 @@ public class Calculator
 	/** Returns the correct total value */
 	public int getTotal () 
 	{
-		return 0;
+		return total;
 	}
 	
 	/**Adds the parameter value to the total value
@@ -28,7 +28,7 @@ public class Calculator
 	 */
 	public void add (int value) 
 	{
-		
+		total = total + value;
 	}
 	
 	/**Subtracts the parameter value from the total value
@@ -37,7 +37,7 @@ public class Calculator
 	 */
 	public void subtract (int value) 
 	{
-		
+		total = total - value;
 	}
 	
 	/**Multiplies the parameter value by the total value
@@ -46,7 +46,7 @@ public class Calculator
 	 */
 	public void multiply (int value) 
 	{
-		
+		total = total * value;
 	}
 	
 	/**Divides the parameter by the total value
@@ -55,7 +55,10 @@ public class Calculator
 	 */
 	public void divide (int value) 
 	{
-		
+		if(value == 0)
+			total = 0;
+		else
+			total = total / value;
 	}
 	
 	/** Returns the entire history of calculations as a String */
